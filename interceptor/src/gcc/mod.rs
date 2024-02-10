@@ -10,6 +10,3 @@ mod network_state_predictor;
 mod network_types;
 mod time;
 mod trendline_estimator;
-
-#[cfg(test)]
-mod random;
