@@ -12,6 +12,7 @@ use stream_info::StreamInfo;
 
 pub mod chain;
 mod error;
+pub mod gcc;
 pub mod mock;
 pub mod nack;
 pub mod noop;
