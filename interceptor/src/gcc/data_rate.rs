@@ -166,6 +166,10 @@ impl DataSize {
     pub const fn bytes(&self) -> i64 {
         self.value
     }
+
+    pub const fn zero() -> Self {
+        Self { value: 0 }
+    }
 }
 
 impl std::ops::Div<f64> for DataSize {

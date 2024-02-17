@@ -42,3 +42,23 @@ impl BweSeparateAudioPacketsSettings {
         }
     }
 }
+
+pub struct DelayBasedBweResult {
+    updated: bool,
+    probe: bool,
+    target_bitrate: DataRate,
+    recovered_from_overuse: bool,
+    delay_detector_state: BandwidthUsage,
+}
+
+impl Default for DelayBasedBweResult {
+    fn default() -> Self {
+        Self {
+            updated: false,
+            probe: false,
+            target_bitrate: DataRate::zero(),
+            recovered_from_overuse: false,
+            delay_detector_state: BandwidthUsage::Normal,
+        }
+    }
+}
